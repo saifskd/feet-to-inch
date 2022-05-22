@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feet to Inch</title>
+</head>
+<style>
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    body {
+        background-color: black;
+    }
+
+    .saif {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 200px;
+    }
+
+    .saif1 {
+        background-color: rgb(250, 114, 2);
+        height: 17rem;
+        width: 30rem;
+        border-radius: 15px;
+        border: 4px solid rgb(250, 114, 2);
+        transition: .3s ease border;
+    }
+
+    .saif1:hover {
+        border: 4px solid #fff;
+    }
+
+    .saif2 {
+        width: 30rem;
+        border-bottom: 4px solid #000;
+        font-size: 25px;
+        letter-spacing: 20px;
+        text-align: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .saif3 {
+        margin-top: 100px;
+        margin-left: 20px;
+        font-size: 30px;
+        font-weight: bold;
+        width: 200px;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .haiding {
+        position: absolute;
+        font-size: 30px;
+        top: 315px;
+        left: 520px;
+        color: rgb(3, 3, 3);
+        font-weight: bold;
+    }
+
+    .haiding1 {
+        position: absolute;
+        font-size: 30px;
+        top: 315px;
+        left: 735px;
+        color: rgb(3, 3, 3);
+        font-weight: bold;
+    }
+</style>
+
+<body>
+    <div class="saif">
+        <div class="saif1">
+            <div class="saif2"> <b> Meter</b></div>
+            <i class="haiding">FEET</i>
+            <i class="haiding1">INCHES</i>
+            <input id="feet" class="saif3" type="number" value="1">
+            <input id="inch" class="saif3" type="number" value="12">
+        </div>
+    </div>
+
+    <script>
+        var feet =
+            document.getElementById('feet');
+
+        var inch =
+            document.getElementById('inch');
+
+        feet.addEventListener('input', function () {
+            let f = this.value
+            let i = f * 12;
+            inch.value = i;
+        });
+
+        inch.addEventListener('input', function () {
+            let i = this.value
+            let f = i / 12;
+            feet.value = f;
+            // if (!Number.isInteger) (f) {
+            //     f = f.toFixed(2)
+            // };
+            // feet.value = f;
+
+        });
+    </script>
+</body>
+
+</html>
